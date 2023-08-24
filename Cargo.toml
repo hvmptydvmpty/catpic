@@ -1,0 +1,8 @@
+[package]
+name = "catpic"
+version = "0.0.1"
+edition = "2021"
+authors = ["Sergey <sergey+github@optimaltec.com>"]
+
+[dependencies]
+async-std = "1.12.0"
