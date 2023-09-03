@@ -10,6 +10,18 @@ Rust study: local picture file catalog with emphasis on identifying
 duplicates and adding missing `Exif
 <https://en.wikipedia.org/wiki/Exif>`_ fields e.g. dates.
 
+----
+
+|build_status| |gpl3_badge|
+
+.. |build_status| https://github.com/hvmptydvmpty/catpic/actions/workflows/rust.yml/badge.svg
+   :target: https://github.com/hvmptydvmpty/catpic/actions/workflows/rust.yml
+   :alt: Build Status Badge
+
+.. |gpl3_badge| image:: https://img.shields.io/badge/License-GPL_3-brightgreen.svg
+   :target: https://github.com/hvmptydvmpty/catpic/blob/main/LICENSE
+   :alt: License GPL 3
+
 Offline
 =======
 
