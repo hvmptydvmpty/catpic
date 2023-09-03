@@ -1,4 +1,6 @@
-.. catpic
+.. -*- fill-column: 128 -*-
+
+.. _catpic
 
 ===============
 Picture Catalog
@@ -18,8 +20,7 @@ functional, here are a few easy hints:
    `<http://[::1]:8001>`_ or `<http://localhost:8001>`_;
    alternatively, can use `rustup doc` without a Web server::
      
-     python3 -m http.server --bind localhost --directory "$(dirname
-     $(rustup doc --path))" 8001 &
+     python3 -m http.server --bind localhost --directory "$(dirname $(rustup doc --path))" 8001 &
 
 2. Generate documentation for the project and its dependencies and
    place in ``target/doc/``; use a similar Python HTTP server as above
@@ -30,8 +31,7 @@ functional, here are a few easy hints:
      
      cargo doc --document-private-items
 
-     python3 -m http.server --bind localhost --directory ./target/doc
-     8002 &
+     python3 -m http.server --bind localhost --directory ./target/doc 8002 &
 
 3. One more notable feature in the previous item is that source code
    of dependency crates is formatted in ``target/doc/src`` and is
