@@ -39,8 +39,8 @@ When in airplane mode, Rust setup out of the box is surprisingly functional, her
 
      python3 -m http.server --bind localhost --directory ./target/doc 8002 &
 
-3. One more notable feature in the previous item is that source code of dependency crates is formatted in ``target/doc/src`` and
-   is convenient for studying their methods.
+3. One more notable feature in the previous item is that formatted source code of dependency crates can be found in
+   ``target/doc/src`` and comes handy for studying other people's coding.
 
 References
 ==========
