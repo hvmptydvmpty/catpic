@@ -13,12 +13,12 @@ Rust study: local picture file catalog with emphasis on identifying duplicates a
 
 |build_status| |gpl3_badge|
 
-.. |build_status| image:: /hvmptydvmpty/catpic/actions/workflows/rust.yml/badge.svg
-   :target: /hvmptydvmpty/catpic/actions/workflows/rust.yml
+.. |build_status| image:: https://github.com/hvmptydvmpty/catpic/actions/workflows/rust.yml/badge.svg
+   :target: https://github.com/hvmptydvmpty/catpic/actions/workflows/rust.yml
    :alt: Build Status Badge
 
 .. |gpl3_badge| image:: https://img.shields.io/badge/License-GPL_3-brightgreen.svg
-   :target: /hvmptydvmpty/catpic/blob/main/LICENSE
+   :target: https://github.com/hvmptydvmpty/catpic/blob/main/LICENSE
    :alt: License GPL 3
 
 Offline
