@@ -5,9 +5,9 @@ use memmap2;
 
 #[derive(Debug)]
 struct Count {
-    dir: u64,
-    img: u64,
-    oth: u64,
+    dir: usize,
+    img: usize,
+    oth: usize,
 }
 
 impl Count {
@@ -52,6 +52,7 @@ async fn walk<P: AsRef<path::Path>>(
 ) -> std::io::Result<()> {
     let mut worq = std::collections::VecDeque::from([p.as_ref().to_path_buf()]);
     let mut count = Count::zero();
+    let mut expected_dir_count: usize = 0;
 
     while !worq.is_empty() {
         let current = worq.pop_front().unwrap();
@@ -82,7 +83,7 @@ async fn walk<P: AsRef<path::Path>>(
             }
         }
 
-        // don't add local_count.dir here, we count them separately when walking
+        expected_dir_count += local_count.dir;
         count.img += local_count.img;
         count.oth += local_count.oth;
         if verbose {
@@ -90,7 +91,11 @@ async fn walk<P: AsRef<path::Path>>(
         }
     }
     if summary {
-        println!("Total {}", count);
+        println!(
+            "Total {}, {} directory(ies) skipped",
+            count,
+            expected_dir_count.saturating_sub(count.dir)
+        );
     }
     Ok(())
 }
